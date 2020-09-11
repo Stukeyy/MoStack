@@ -75,13 +75,13 @@ class FormController extends Controller
     public function update(Request $request, $id)
     {
 
-      Log::info("Update Function Successful");
+      // Log::info("Update Function Successful");
 
       $user = Form::find($id);
       $user->name = $request->input('user');
       $user->save();
-      // $returnedData = FormResource::collection(Form::all())->sortBy('id');
 
+      // $returnedData = FormResource::collection(Form::all())->sortBy('id');
       // $check = serialize($returnedData);
       // Log::info($check);
 
